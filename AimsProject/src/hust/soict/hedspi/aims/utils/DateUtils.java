@@ -1,4 +1,4 @@
-package hedspi.oolt.labs;
+package hust.soict.hedspi.aims.utils;
 
 public class DateUtils {
 	static void swap(MyDate[] arr, int i, int j)

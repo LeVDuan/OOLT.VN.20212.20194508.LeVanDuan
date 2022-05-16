@@ -1,4 +1,6 @@
-package hedspi.oolt.labs;
+package hust.soict.hedspi.aims.disc;
+
+import java.util.Random;
 
 public class DigitalVideoDisc {
     // khai báo thuộc tính
@@ -106,4 +108,20 @@ public class DigitalVideoDisc {
 		System.out.println("Length: " + this.length);
 		System.out.println("Cost: " + this.cost);
 	}
+	
+	// xay dung phuong thuc tim kiem theo title
+	public boolean search(String title) {
+		// tach title cua tham so can tim thanh cac tu (word)
+		//-> phuc vu cho viec xu ly tim kiem
+		String sTitle[] = title.split(" ");
+		for (int i = 0; i < sTitle.length; i++) {
+			if(this.title.contains(sTitle[i]) == false) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	
+	
 }

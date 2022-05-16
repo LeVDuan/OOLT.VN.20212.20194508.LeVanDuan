@@ -1,5 +1,9 @@
-package hedspi.oolt.labs;
+package hust.soict.hedspi.aims.order;
 import java.time.LocalDateTime;
+import java.util.Random;
+
+import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.utils.MyDate;
 
 public class Order {
     // Khai báo một hằng số là số lượng sản phẩm tối đa
@@ -118,4 +122,12 @@ public class Order {
 				+ "***************************************************\n");
 	}
 	
+	// xay dung phuong thuc chon mot san pham ngau nhien trong danh sach
+		// va mien phi cho sp nay
+		public DigitalVideoDisc getLuckyItem() {
+			Random rd = new Random();
+			int luckynumber = rd.nextInt(this.qtyOrdered);
+			this.itemsOrdered[luckynumber].setCost(0);
+			return this.itemsOrdered[luckynumber];
+		}
 }

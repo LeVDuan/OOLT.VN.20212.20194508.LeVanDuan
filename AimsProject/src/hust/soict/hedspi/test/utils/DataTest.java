@@ -1,4 +1,7 @@
-package hedspi.oolt.labs;
+package hust.soict.hedspi.test.utils;
+
+import hust.soict.hedspi.aims.utils.DateUtils;
+import hust.soict.hedspi.aims.utils.MyDate;
 
 public class DataTest {
 	public static void main(String[] args) {

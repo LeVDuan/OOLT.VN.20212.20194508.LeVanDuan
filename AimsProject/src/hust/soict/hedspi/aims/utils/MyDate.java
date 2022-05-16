@@ -1,4 +1,4 @@
-package hedspi.oolt.labs;
+package hust.soict.hedspi.aims.utils;
 
 import java.util.Scanner;
 
