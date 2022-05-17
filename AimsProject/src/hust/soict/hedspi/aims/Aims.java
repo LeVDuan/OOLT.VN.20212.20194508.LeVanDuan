@@ -7,6 +7,7 @@ public class Aims {
     public static void main(String[] args) {
     	
 		DigitalVideoDisc dvd0 = new DigitalVideoDisc();
+		dvd0.printInfo();
 		DigitalVideoDisc dvd1 = new DigitalVideoDisc("title1");
 		dvd1.setCategory("18+");
 		dvd1.setDirector("DuanLe");
@@ -47,5 +48,6 @@ public class Aims {
 		
 		order2.addDigitalVideoDisc(dvd2, dvd3);
 		order2.printOder();
+		
 	}
 }

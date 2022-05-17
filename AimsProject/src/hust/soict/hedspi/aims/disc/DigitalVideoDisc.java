@@ -1,7 +1,5 @@
 package hust.soict.hedspi.aims.disc;
 
-import java.util.Random;
-
 public class DigitalVideoDisc {
     // khai báo thuộc tính
 	private String title;
