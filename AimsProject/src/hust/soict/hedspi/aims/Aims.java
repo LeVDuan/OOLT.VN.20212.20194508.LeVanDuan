@@ -1,53 +1,28 @@
 package hust.soict.hedspi.aims;
 
-import hust.soict.hedspi.aims.disc.DigitalVideoDisc;
+import hust.soict.hedspi.aims.media.*;
 import hust.soict.hedspi.aims.order.Order;
 
+import java.util.Scanner;
 public class Aims {
-    public static void main(String[] args) {
-    	
-		DigitalVideoDisc dvd0 = new DigitalVideoDisc();
-		dvd0.printInfo();
-		DigitalVideoDisc dvd1 = new DigitalVideoDisc("title1");
-		dvd1.setCategory("18+");
-		dvd1.setDirector("DuanLe");
-		dvd1.setLength(123);
-		dvd1.setCost(69.96f);
-		
-		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Anh tho sua ong nuoc", "18+", "DuanLe", 150, 70.32f);
-		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Anh chong bat luc", "Jav", "DuanLe", 200, 64.34f);
-		
-//		dvd0.printInfo();
-//		dvd1.printInfo();
-//		dvd2.printInfo();
-//		dvd3.printInfo();
-		
-		// Tạo đơn hàng mới
-		Order anOrder = new Order();
-		anOrder.addDigitalVideoDisc(dvd1);
-		anOrder.addDigitalVideoDisc(dvd2);
-		anOrder.addDigitalVideoDisc(dvd3);
-		
-		System.out.println("Total cost: " + anOrder.totalCost() + "$");
-		
-		anOrder.removeDigitalVideoDisc(dvd3);
-		anOrder.removeDigitalVideoDisc(dvd2);
-		
-		System.out.println("Total cost: " + anOrder.totalCost() + "$");
-		
-		
-		// Tạo order test overloading
-		Order order2 = new Order();
-		
-		DigitalVideoDisc dvdList[] = new DigitalVideoDisc[5];
-		
-		for (int i = 0; i < dvdList.length; i++) {
-			dvdList[i] = new DigitalVideoDisc("title1", "18+", "DuanLe", 150, 70f);
-		}
-		order2.addDigitalVideoDisc(dvdList);
-		
-		order2.addDigitalVideoDisc(dvd2, dvd3);
-		order2.printOder();
-		
+	public static void showMenu() {
+		System.out.println("Order Management Application: ");
+		System.out.println("==============================");
+		System.out.println("1. Create new order");
+		System.out.println("2. Add item to the order");
+		System.out.println("3. Delete item by id");
+		System.out.println("4. Display the items list of order");
+		System.out.println("0. Exit");
+		System.out.println("==============================");
+		System.out.println("Plesea choose a number: 0-1-2-3-4");
 	}
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+    	int choice = 0;
+    	do {
+    		Aims.showMenu();
+    		choice = sc.nextInt();
+		} while (choice != 0);
+    	
+    }	
 }
