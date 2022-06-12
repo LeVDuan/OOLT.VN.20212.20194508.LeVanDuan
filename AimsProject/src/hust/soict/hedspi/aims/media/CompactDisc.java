@@ -3,7 +3,7 @@ package hust.soict.hedspi.aims.media;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class CompactDisc extends Disc implements Playable {
+public class CompactDisc extends Disc implements Playable, Comparable<CompactDisc> {
 	private String artist;
 	private ArrayList<Track> tracks = new ArrayList<Track>();
 	
@@ -32,14 +32,20 @@ public class CompactDisc extends Disc implements Playable {
 		for (Iterator<Track> iterator = tracks.iterator(); iterator.hasNext();) {
 			 sum += iterator.next().getLength();
 		}
-		return sum;
+		super.length = sum;
+		return super.length;
 	}
 	
 	public void play() {
 		for (Iterator<Track> iterator = tracks.iterator(); iterator.hasNext();) {
 			iterator.next().play();
-			
 		}
+	}
+	
+	@Override 
+	public int compareTo(CompactDisc obj) {
+		return this.id - obj.id;
+		
 	}
 	
 }
