@@ -66,7 +66,7 @@ public class Order {
 		}
 	}
 	public void removeMedia(Media item) {
-		if(!itemsOrdered.contains(item))
+		if(itemsOrdered.contains(item))
 			itemsOrdered.remove(item);
 	}
 	

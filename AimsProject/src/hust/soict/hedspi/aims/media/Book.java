@@ -7,8 +7,9 @@ public class Book extends Media  {
 		private ArrayList<String> authors = new ArrayList<String>();
 		
 		// constructor
-		public Book() {
-			super();
+		public Book(String title, String author) {
+			super(title);
+			this.addAuthor(author);
 		}
 		public ArrayList<String> getAuthors() {
 			return authors;
@@ -24,7 +25,7 @@ public class Book extends Media  {
 		}
 		
 		public void removeAuthor(String authorName) {
-			if(!authors.contains(authorName))
+			if(authors.contains(authorName))
 				authors.remove(authorName);
 		}
 		
