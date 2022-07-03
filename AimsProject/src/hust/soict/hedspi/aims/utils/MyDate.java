@@ -112,7 +112,7 @@ public class MyDate {
 		// các phương thức khác
 		// print format d/m/yyyy
 		 public void print() {
-			 System.out.println(this.day + "/" + this.month + "/" + this.year + "\n");
+			 System.out.println(this.day + "/" + this.month + "/" + this.year);
 		 }
 		
 		public void accept() {

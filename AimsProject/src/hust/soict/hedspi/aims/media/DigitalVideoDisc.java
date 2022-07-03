@@ -7,7 +7,6 @@ public class DigitalVideoDisc extends Disc implements Playable, Comparable<Digit
 	}
 	public DigitalVideoDisc(String title) {
 		super(title);
-		this.title = "";
 		this.category = "";
 		this.director ="";
 		this.length = 0;
@@ -15,8 +14,7 @@ public class DigitalVideoDisc extends Disc implements Playable, Comparable<Digit
 	}
 	
 	 public DigitalVideoDisc(String title, String category, String directory, int length, float cost) {
-	        super();
-	        this.title = title;
+	        super(title);
 	        this.category = category;
 	        this.director = directory;
 	        this.length = length;
@@ -33,7 +31,11 @@ public class DigitalVideoDisc extends Disc implements Playable, Comparable<Digit
     }
     
 	
-	public void play() {
+	public void play() throws PlayerException {
+		if(this.getLength() <= 0) {
+			System.out.println("ERROR: DVD length is 0");
+			throw (new PlayerException());
+		}
 		System.out.println("Playing DVD: " + this.getTitle());
 		System.out.println("DVD length: " + this.getLength());
 	}

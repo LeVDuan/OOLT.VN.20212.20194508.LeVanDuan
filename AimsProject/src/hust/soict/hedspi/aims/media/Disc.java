@@ -25,5 +25,14 @@ public class Disc extends Media{
 		return director;
 	}
 	
+	public String setDirector(String director) {
+		this.director = director;
+		return director;
+	}
+	
+	public int setLength(int length) {
+		this.length = length;
+		return length;
+	}
 	
 }

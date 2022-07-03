@@ -61,7 +61,13 @@ public abstract class Media {
 		else this.cost = 0.0f;
 	}
 	
-
+	public void printMedia() {
+		System.out.println("Id: "+ this.id + "\n" +
+						   "Title: " + this.title + "\n"+
+						   "Category: " + this.category +"\n"+
+						   "Cost: " + this.cost +"\n\n");
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		return ((Media) obj).getId() == this.id;

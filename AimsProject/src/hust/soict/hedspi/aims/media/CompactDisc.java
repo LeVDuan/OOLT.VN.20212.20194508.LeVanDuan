@@ -7,6 +7,10 @@ public class CompactDisc extends Disc implements Playable, Comparable<CompactDis
 	private String artist;
 	private ArrayList<Track> tracks = new ArrayList<Track>();
 	
+	public CompactDisc() {
+		super();
+	}
+	
 	public CompactDisc(String title, String artist, Track track) {
 		super(title);
 		this.artist = artist;
@@ -14,6 +18,11 @@ public class CompactDisc extends Disc implements Playable, Comparable<CompactDis
 	}
 	
 	public String getArtist() {
+		return artist;
+	}
+	
+	public String setArtist(String artist) {
+		this.artist = artist;
 		return artist;
 	}
 	
@@ -27,6 +36,7 @@ public class CompactDisc extends Disc implements Playable, Comparable<CompactDis
 			tracks.remove(track);
 	}
 	
+	@Override
 	public int getLength() {
 		int sum = 0;
 		for (Iterator<Track> iterator = tracks.iterator(); iterator.hasNext();) {
@@ -36,9 +46,17 @@ public class CompactDisc extends Disc implements Playable, Comparable<CompactDis
 		return super.length;
 	}
 	
-	public void play() {
+	public void play() throws PlayerException {
+		if(this.getLength() <= 0) {
+			System.out.println("ERROR: CD length is 0");
+			throw (new PlayerException());
+		}
 		for (Iterator<Track> iterator = tracks.iterator(); iterator.hasNext();) {
+			try {
 			iterator.next().play();
+			} catch(PlayerException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 	

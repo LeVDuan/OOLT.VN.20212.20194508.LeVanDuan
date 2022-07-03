@@ -12,10 +12,16 @@ public class Book extends Media implements Comparable<Book> {
 		private String content;
 		
 		// constructor
+		public Book() {
+			super();
+		}
+		
 		public Book(String title, String author) {
 			super(title);
 			this.addAuthor(author);
 		}
+		
+		// get, set
 		public ArrayList<String> getAuthors() {
 			return authors;
 		}
@@ -24,6 +30,7 @@ public class Book extends Media implements Comparable<Book> {
 			this.authors = authors;
 		}
 		
+		// other
 		public void addAuthor(String authorName) {
 			if(!authors.contains(authorName))
 				authors.add(authorName);

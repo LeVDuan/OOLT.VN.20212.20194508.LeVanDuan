@@ -11,6 +11,15 @@ public class Track implements Playable, Comparable<Track>{
 		return length;
 	}
 	
+	public String setTitle(String title) {
+		this.title = title;
+		return title;
+	}
+	public int setLength(int length) {
+		this.length = length;
+		return length;
+	}
+	
 	public Track() {
 		this.title = "";
 		this.length = 0;
@@ -25,7 +34,11 @@ public class Track implements Playable, Comparable<Track>{
 		this.length = length;
 	}
 	
-	public void play() {
+	public void play() throws PlayerException {
+		if(this.getLength() <= 0) {
+			System.out.println("ERROR: DVD length is 0");
+			throw (new PlayerException());
+		}
 		System.out.println("Playing CD: " + this.getTitle());
 		System.out.println("CD length: " + this.getLength());
 	}
