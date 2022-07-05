@@ -169,7 +169,7 @@ public class Aims {
 				break;
 			case 4:
 				try {
-					newOrder.printOrder();
+					newOrder.display();
 				} catch(NullPointerException e) {
 					System.out.println("Order does not exist.");
 				}

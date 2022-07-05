@@ -14,22 +14,22 @@ public class DiskTest {
 		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Anh tho cai win den dui gap co chu nha kho tinh");
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Co thu ki va tinh yeu danh cho dong nghiep");
 		// test search method
-		Order order0 = new Order();
-		
-		ArrayList<Order> listOrder = new ArrayList<>();
-		listOrder.add(order0);
-		
-		order0.addMedia((Media)dvd0);
-		order0.addMedia((Media)dvd1);
-		order0.addMedia((Media)dvd2);
-		order0.addMedia((Media)dvd3);
-		
-		listOrder.get(order0.getNbOrders()).printOrder();
-		
-		order0 = new Order();
-		order0.addMedia((Media)dvd0);
-		order0.addMedia((Media)dvd1);
-		listOrder.get(order0.getNbOrders()).printOrder();
+//		Order order0 = new Order();
+//		
+//		ArrayList<Order> listOrder = new ArrayList<>();
+//		listOrder.add(order0);
+//		
+//		order0.addMedia((Media)dvd0);
+//		order0.addMedia((Media)dvd1);
+//		order0.addMedia((Media)dvd2);
+//		order0.addMedia((Media)dvd3);
+////		
+////		listOrder.get(order0.getNbOrders()).printOrder();
+////		
+////		order0 = new Order();
+////		order0.addMedia((Media)dvd0);
+////		order0.addMedia((Media)dvd1);
+////		listOrder.get(order0.getNbOrders()).printOrder();
 	}
 
 }

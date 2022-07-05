@@ -21,6 +21,9 @@ public class DigitalVideoDisc extends Disc implements Playable, Comparable<Digit
 	        this.cost = cost;
 	    }
 	
+	public DigitalVideoDisc(int id,String title,String category,float cost, String director, int length){
+        super(id,title,category,cost,director,length);
+    }
 	public void printInfo(){
         System.out.println("\n-----DVD Info-----");
         System.out.println("Title: " + this.title);

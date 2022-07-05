@@ -13,7 +13,7 @@ public class TestMediaCompareTo {
         int orderId;
         int itemId = 0;
         Scanner keyboard = new Scanner(System.in);
-        Order[] orderList = new Order[Order.MAX_LIMITTED_ORDERS];
+        Order[] orderList = new Order[10];
 		
         
         DigitalVideoDisc dvd0 = new DigitalVideoDisc();

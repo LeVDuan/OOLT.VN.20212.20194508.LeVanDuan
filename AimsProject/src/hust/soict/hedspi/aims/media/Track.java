@@ -53,4 +53,13 @@ public class Track implements Playable, Comparable<Track>{
 	public int compareTo(Track obj) {
 		return this.title.compareTo(obj.getTitle());
 	}
+	
+	public boolean isEqualAll(Track aTrack) {
+        if (this.title.equals(aTrack.getTitle())) {
+            if (this.length == aTrack.length) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
